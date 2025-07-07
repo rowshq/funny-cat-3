@@ -2,44 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cat Website</title>
+  <title>Cat Video</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       background-color: black;
       color: white;
       font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
     }
 
-    .video-container {
-      width: 100%;
-      height: 100vh;
+    .video-wrapper {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      border: 4px solid white;
+      border-radius: 12px;
       overflow: hidden;
     }
 
-    .video-container video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    video {
+      width: 60%;
+      height: auto;
+      display: block;
     }
 
     .text {
-      background-color: black;
-      text-align: center;
-      padding: 40px 20px;
       font-size: 1.8em;
     }
   </style>
 </head>
 <body>
 
-  <div class="video-container">
-    <video autoplay controls loop playsinline>
+  <div class="video-wrapper">
+    <video autoplay controls loop controls playsinline>
       <source src="video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
