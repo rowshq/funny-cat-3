@@ -2,38 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Cat Website</title>
+  <title>Full Video Page</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: black; /* чёрный фон */
-      color: white; /* белый текст */
+      box-sizing: border-box;
     }
 
-    .video-container {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    .video-fullscreen {
+      position: relative;
       width: 100%;
-      max-height: 400px;
+      height: 100vh;
       overflow: hidden;
     }
 
-    video {
+    .video-fullscreen video {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
     }
 
     .text {
       padding: 30px;
       text-align: center;
       font-size: 1.8em;
+      background-color: black;
     }
   </style>
 </head>
 <body>
 
-  <div class="video-container">
+  <div class="video-fullscreen">
     <video autoplay muted loop>
       <source src="video.mp4" type="video/mp4">
       Your browser does not support the video tag.
